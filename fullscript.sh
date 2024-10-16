@@ -5,7 +5,6 @@ echo "Введите Ваше имя: "
 read name
 echo "Welcome to terminal $name"
 mkdir /tmp/test
-touch mydate.txt /tmp/test
 date +"%H:%M:%S" >> /tmp/test/mydate.txt
 for SAVE in {1..10}
 echo "Сохраняем данные"
@@ -14,6 +13,7 @@ sleep 0.5
 done
 echo "Data saved.continue work"
 df -h >> /tmp/test/mydate.txt
+mkdir /opt/mydate
 cp /tmp/test/mydate.txt /opt/mydate/newmydate.txt
 for DONE in {5..1}
 do
